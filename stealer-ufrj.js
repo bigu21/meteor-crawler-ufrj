@@ -16,7 +16,7 @@ if(Meteor.isServer) {
 
         $ = cheerio.load(content);
 
-        console.log($("html").html());
+        //console.log($("html").html());
     }
 
     settings =  {
@@ -25,19 +25,17 @@ if(Meteor.isServer) {
             followAllRedirects: true,
             strictSSL: false,
             jar: true,
-            params: {
-                usuario: "***REMOVED***",
-                senha: '***REMOVED***'
-            }
+            params: {}
         }
     }
 
-    login_ufrj(settings);
+    //login_ufrj(settings);
 
     Meteor.methods({
         login_ufrj: function(username, password) {
-            _.extend(settings,{username: username, password: password});
+            _.extend(settings.options.params, {usuario: username, senha: password});
             login_ufrj(settings)
+            console.log(settings);
         }
     });
 }
