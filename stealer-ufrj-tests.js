@@ -1,4 +1,5 @@
 Tinytest.add('Test name', function(test) {
-    tests.equal(1,1);
-    tests.equal(1,2);
+    test.equal('xxxx','xxxx');
+    test.equal('1','1');
 });
+

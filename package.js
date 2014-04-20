@@ -4,14 +4,12 @@ Package.describe({
 
 Package.on_use(function(api) {
 
+    api.use(['underscore', 'http-more' ], ['client', 'server']);
     api.add_files('stealer-ufrj.js', ['client', 'server']);
-
-    api.use('http-more',['client', 'server']);
 });
 
 
 Package.on_test(function(api) {
-    api.use(['tinytest', 'stealer-ufrj']);
-
+    api.use(['tinytest', 'http-more', 'stealer-ufrj'], ['client', 'server']);
     api.add_files(['stealer-ufrj-tests.js'], ['client', 'server']);
 });
