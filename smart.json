@@ -1,0 +1,12 @@
+{
+    "name": "stealer-ufrj",
+    "description": "Stealer UFRJ craws data from UFRJ Intranet and SIGA",
+    "homepage": "https://github.com/gabrielalmeida/stealer-ufrj",
+    "author": "Gabriel Almeida",
+    "version": "0.0.1",
+    "git": "https://github.com/gabrielalmeida/stealer-ufrj.git",
+    "packages": {
+        "http-more": {},
+        "npm": {}
+    }
+}
