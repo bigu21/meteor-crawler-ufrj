@@ -6,7 +6,7 @@ if(Meteor.isServer) {
     var sigaStealer = function(requestedUrl, settings) {
 
     if(!_.isObject(settings))
-        settings = {};
+        throw new Meteor.Error(400, "settings must be of object type");
 
     if(!requestedUrl || !_.isString(requestedUrl))
         throw new Meteor.Error(400, "requestUrl not found or is not a string");
