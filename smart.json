@@ -7,5 +7,8 @@
     "git": "https://github.com/gabrielalmeida/stealer-ufrj.git",
     "packages": {
         "npm": {}
+        "reachable": {
+            "git": "https://github.com/gabrielalmeida/reachable.git"
+        }
     }
 }
