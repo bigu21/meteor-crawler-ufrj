@@ -19,6 +19,7 @@ if(Meteor.isServer) {
             followAllRedirects: true,
             strictSSL: false,
             rejectUnauthorized: false,
+            timeout: 2000,
             jar: jar,
             form: {
                 usuario: settings.username,
@@ -32,6 +33,7 @@ if(Meteor.isServer) {
             });
         });
 
+        console.log(reqIntranet.result.body);
         $ = cheerio.load(reqIntranet.result.body);
 
         // Cheerio selector for SIGA from href attr at Intranet Services page
@@ -49,9 +51,11 @@ if(Meteor.isServer) {
             });
         });
 
+        jar = request.jar();
+        console.log(reqSIGA.result.body);
         return reqSIGA.result.body;
     }
 
-    stealerUFRJ('https://siga.ufrj.br//sira/Service/cridAluno', {username: '***REMOVED***', password: '***REMOVED***'});
+    console.log(stealerUFRJ('https://siga.ufrj.br//sira/Service/cridAluno', {username: '***REMOVED***', password: '***REMOVED***'}));
+    console.log("dadadsadsa");
 }
-
