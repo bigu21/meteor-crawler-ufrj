@@ -6,7 +6,7 @@
     "version": "0.0.1",
     "git": "https://github.com/bigu21/stealer-ufrj.git",
     "packages": {
-        "npm": {}
+        "npm": {},
         "reachable": {
             "git": "https://github.com/bigu21/reachable.git"
         }
