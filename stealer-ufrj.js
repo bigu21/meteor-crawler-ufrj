@@ -28,7 +28,7 @@
               iterationLoop: 1,
               rejectUnauthorized: false,
               timeout: 6000,
-              jar: jar
+              jar: jar 
           });
 
       
@@ -47,12 +47,7 @@
             mainReq = wrappedRequest( _.extend(settings, {url: requestedUrl}) );
           }
 
-          wrappedRequest( _.extend(settings, {
-            method: 'GET',
-            url: 'https://siga.ufrj.br/sira/intranet/LogoutSiga.jsp'
-          }));
-          jar = request.jar();
-
+          console.log(mainReq.body);
           return mainReq.body;
       }, 
       ufrjCep: function(settings) {
@@ -68,25 +63,14 @@
           var $ = cheerio.load(cep);
           cep = $('.textField').val();
 
-
           console.log(cep);
         } catch(e) {
-          console.log(e);
+          if( e.code === 'ETIMEDOUT' || e.code === 'ECONNREFUSED' )
+            console.log('O SIGA encontra-se fora do ar, pra variar');
         }
 
           return cep;
       }
   });
-
-
-  //if(Meteor.isServer) {
-    //var churros = Meteor.call('ufrjCep', {
-      //form: {
-        //usuario: '***REMOVED***', 
-        //senha: '***REMOVED***',
-        //PessoanextCard: 'PessoanextCard'
-      //}
-    //});
-  //}
 
 }());

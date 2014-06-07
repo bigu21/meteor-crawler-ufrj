@@ -1,0 +1,14 @@
+{
+"name": "stealer-ufrj",
+  "version": "0.1.1",
+  "description": "",
+  "author": "Gabriel Almeida <gabriel.almeida.rj@gmail.com>",
+  "dependencies": {
+    "cheerio": "0.15.x",
+    "request": "2.34.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bigu21/stealer-ufrj.git"
+  }
+}

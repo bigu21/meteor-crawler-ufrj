@@ -3,8 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function(api) {
-
-    api.use(['underscore', 'npm', 'reachable' ], 'server');
+    api.use(['underscore', 'npm', 'reachable'], 'server');
     api.add_files('stealer-ufrj.js', ['client', 'server']);
 });
 
