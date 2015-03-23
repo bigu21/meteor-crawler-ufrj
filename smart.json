@@ -1,14 +1,14 @@
 {
-    "name": "stealer-ufrj",
-    "description": "Stealer UFRJ craws data from UFRJ Intranet and SIGA",
-    "homepage": "https://github.com/bigu21/stealer-ufrj",
+    "name": "crawler-ufrj",
+    "description": "Crawler UFRJ: craws data from UFRJ Intranet and SIGA",
+    "homepage": "https://github.com/bigu21/meteor-crawler-ufrj",
     "author": "Gabriel Almeida",
     "version": "0.0.1",
-    "git": "https://github.com/bigu21/stealer-ufrj.git",
+    "git": "https://github.com/bigu21/meteor-crawler-ufrj.git",
     "packages": {
         "npm": {},
         "reachable": {
-            "git": "https://github.com/bigu21/reachable.git"
+            "git": "https://github.com/bigu21/meteor-reachable.git"
         }
     }
 }
