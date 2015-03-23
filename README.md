@@ -1,4 +1,4 @@
-# Stealer UFRJ
+# Crawler UFRJ
 
 A __Meteor__ package to crawl data from http://intranet.ufrj.br and SIGA, 
 both internal student management online environment of Federal University of Rio de Janeiro(UFRJ)
